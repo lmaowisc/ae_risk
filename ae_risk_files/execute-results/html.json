@@ -1,0 +1,16 @@
+{
+  "hash": "8a6bea5769f932eff3e0f11503632efa",
+  "result": {
+    "markdown": "---\ntitle: \"Estimating AE risk under varying follow-up times and competing risks\"\nauthor: \"Lu Mao, KyungMann Kim\"\ndate: today\nformat: \n  html:\n   toc: true\n---\n\n\n## Literature\n\n#### ISCB (2024) Invited Session\n\n**Quantification of safety signals in clinical trials: Estimand,\nestimation, and how would good look like in ten years?**\n\n-   **Kaspar Rufibach**: Principled approach to time-to-event endpoints with competing\nrisks, with a focus on analysis of aes [slides]\n-   **Anja Loos**: Estimands for safety – one size fits all? [paper]\n-   **Laura Antolini**: Adverse events with survival outcomes: from clinical questions\nto methods for statistical analysis [slides]\n-   **Kit Roes**: Regulatory perspective on the analysis of safety in clinical\ntrials and beyond [slides]\n\n  \n## Ideas from the *while-alive* approach\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# usethis::use_github()\n# \n# usethis::create_github_token()\n# gitcreds::gitcreds_set()\n```\n:::\n",
+    "supporting": [
+      "ae_risk_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

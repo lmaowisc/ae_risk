@@ -26,6 +26,10 @@ trials and beyond [slides]
 ## Ideas from the *while-alive* approach
 
 ```{r}
-usethis::use_github()
+# usethis::use_github()
+# 
+# usethis::create_github_token()
+# gitcreds::gitcreds_set()
+
 ```
 
