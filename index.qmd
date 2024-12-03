@@ -13,7 +13,7 @@ format:
 
 *Quantification of safety signals in clinical trials: Estimand, estimation, and how would good look like in ten years?* \[[Abstracts](References/abstracts.pdf){target="_blank"}\]
 
--   **Kaspar Rufibach**: Principled approach to time-to-event endpoints with competing risks, with a focus on analysis of aes \[[slides](References/Rufibach_slides_2023.pdf){target="_blank"}\]
+-   **[Kaspar Rufibach](https://numbersman77.github.io/kasparrufibach/){target="_blank"}**: Principled approach to time-to-event endpoints with competing risks, with a focus on analysis of aes \[[slides](References/Rufibach_slides_2023.pdf){target="_blank"}\]
 -   **Anja Loos**: Estimands for safety – one size fits all? \[[paper](References/Unkel et al (2019) - Pharm Statist.pdf){target="_blank"}\]
 -   **Laura Antolini**: Adverse events with survival outcomes: from clinical questions to methods for statistical analysis \[[PhD dissertation](References/ELENA_phd.pdf){target="_blank"}\]
 -   **Kit Roes**: Regulatory perspective on the analysis of safety in clinical trials and beyond \[slides\]
