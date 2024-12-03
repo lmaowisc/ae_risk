@@ -24,3 +24,8 @@ trials and beyond [slides]
 
   
 ## Ideas from the *while-alive* approach
+
+```{r}
+usethis::use_github()
+```
+
