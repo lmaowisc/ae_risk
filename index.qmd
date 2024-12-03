@@ -9,7 +9,7 @@ format:
 
 ## Existing materials
 
-#### ISCB (2024) Invited Session
+#### ISCB (2023) Invited Session
 
 *Quantification of safety signals in clinical trials: Estimand, estimation, and how would good look like in ten years?* \[[Abstracts](References/abstracts.pdf){target="_blank"}\]
 
