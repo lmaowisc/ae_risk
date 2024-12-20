@@ -73,6 +73,8 @@ SAVVY site: [https://numbersman77.github.io/savvy/](https://numbersman77.github.
         -   $S(t) = P(D > t)$
         -   $\int_{\tau_{j-1}}^{\tau_j} S(t) {\rm d}t$ is *window mean life* [@paukner2021] in $[\tau_{j-1}, \tau_j]$
     -   *Estimation* $(X=D\wedge C; C \mbox{ is censoring time})$
+        -   Numberator: 
+            estimated by AJ-type estimator
         -   $\int_{\tau_{j-1}}^{\tau_j} S(t) {\rm d}t$: AUC of KM estimator on $(\tau_{j-1}, \tau_j]$
     -   Property:
 
