@@ -166,6 +166,15 @@ div.csl-indent {
 <li>Does not account for time at risk</li>
 </ul></li>
 </ul></li>
+<li><p><strong>Average incidence while on treatment</strong></p>
+<ul>
+<li><span class="math inline">\(E\{N(t)\}/E\{D\wedge t\}\)</span>: average number of AE per unit time on treatment (alive) <span class="citation" data-cites="mao2023">(<a href="#ref-mao2023" role="doc-biblioref">Mao 2023</a>)</span>
+<ul>
+<li><span class="math inline">\(E\{N(t)\}\)</span> estimated by AJ (aka Ghosh-Lin, Gray) estimator</li>
+<li><span class="math inline">\(E\{D\wedge t\}\)</span> estimated by AUC of Kaplan-Meier estimator</li>
+</ul></li>
+<li>Possible extension: average incidence during year 1, 2, etc., per unit time on treatment</li>
+</ul></li>
 </ul>
 </section>
 <section id="references" class="level2 unnumbered">
@@ -174,6 +183,9 @@ div.csl-indent {
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-mao2023" class="csl-entry" role="listitem">
+Mao, Lu. 2023. <span>“Nonparametric Inference of General While-Alive Estimands for Recurrent Events.”</span> <em>Biometrics</em> 79 (3): 1749–60. <a href="https://doi.org/10.1111/biom.13709">https://doi.org/10.1111/biom.13709</a>.
+</div>
 <div id="ref-rufibach2024" class="csl-entry" role="listitem">
 Rufibach, Kaspar, Jan Beyersmann, Tim Friede, Claudia Schmoor, and Regina Stegherr. 2024. <span>“Survival Analysis for AdVerse Events with VarYing Follow-up Times (SAVVY): Summary of Findings and Assessment of Existing Guidelines.”</span> <em>Trials</em> 25 (1). <a href="https://doi.org/10.1186/s13063-024-08186-7">https://doi.org/10.1186/s13063-024-08186-7</a>.
 </div>

@@ -53,6 +53,13 @@ SAVVY site: [https://numbersman77.github.io/savvy/](https://numbersman77.github.
         -   Estimated by AJ estimator
         -   Does not account for time at risk
 
+-   **Average incidence while on treatment**
+
+    -   $E\{N(t)\}/E\{D\wedge t\}$: average number of AE per unit time on treatment (alive) [@mao2023]
+        -   $E\{N(t)\}$ estimated by AJ (aka Ghosh-Lin, Gray) estimator
+        -   $E\{D\wedge t\}$ estimated by AUC of Kaplan-Meier estimator
+    -   Possible extension: average incidence during year 1, 2, etc., per unit time on treatment
+
 
 ## References
 
