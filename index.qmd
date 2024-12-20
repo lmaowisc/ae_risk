@@ -75,7 +75,7 @@ SAVVY site: [https://numbersman77.github.io/savvy/](https://numbersman77.github.
     -   *Estimation* $(X=D\wedge C; C \mbox{ is censoring time})$
         -   Numberator: 
         $$
-            E\{N(\tau_j)-N(\tau_{j-1})\} = \int_{\tau_{j-1}}^{\tau_j} E\left\{{\rm d} N(t)\mid X\geq t\right\} S(t -) {\rm d}t
+            E\{N(\tau_j)-N(\tau_{j-1})\} = \int_{\tau_{j-1}}^{\tau_j} E\{ N(t)\mid X\geq t \} S(t -) {\rm d}t
             $$ 
             estimated by AJ-type estimator
         -   $\int_{\tau_{j-1}}^{\tau_j} S(t) {\rm d}t$: AUC of KM estimator on $(\tau_{j-1}, \tau_j]$
