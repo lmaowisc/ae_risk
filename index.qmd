@@ -65,11 +65,7 @@ SAVVY site: [https://numbersman77.github.io/savvy/](https://numbersman77.github.
     -   *Overall estimand*: $$
         l(\tau) = \frac{E\{N(\tau)\}}{E\{D\wedge \tau\}}: \mbox{ Average incidence in }[0, \tau] 
         $$
-    -   *Window-specific estimands* $(0=\tau_0<\tau_1<\cdots<\tau_J = \tau)$ \begin{align}
-           l(\tau_{j-1}, \tau_j] &= \frac{\mbox{Average number of AE in $[\tau_{j-1}, \tau_j]$}}{\mbox{Average time on treatment in $[\tau_{j-1}, \tau_j]$}}\\
-           & = \frac{E\{N(\tau_j)-N(\tau_{j-1})\}}{E\{D\wedge \tau_j - D\wedge \tau_{j-1}\}}\\
-           & = \frac{E\{N(\tau_j)-N(\tau_{j-1})\}}{\int_{\tau_{j-1}}^{\tau_j} S(t) {\rm d}t}
-        \end{align}
+    -   *Window-specific estimands* $(0=\tau_0<\tau_1<\cdots<\tau_J = \tau)$ 
         -   $S(t) = P(D > t)$
         -   $\int_{\tau_{j-1}}^{\tau_j} S(t) {\rm d}t$ is *window mean life* [@paukner2021] in $[\tau_{j-1}, \tau_j]$
     -   *Estimation* $(X=D\wedge C; C \mbox{ is censoring time})$
@@ -77,7 +73,12 @@ SAVVY site: [https://numbersman77.github.io/savvy/](https://numbersman77.github.
             E\{N(\tau_j)-N(\tau_{j-1})\} = \int_{\tau_{j-1}}^{\tau_j} E\{{\rm d} N(t)\mid X\geq t\} S(t -) {\rm d}t
             $$ estimated by AJ-type estimator
         -   $\int_{\tau_{j-1}}^{\tau_j} S(t) {\rm d}t$: AUC of KM estimator on $(\tau_{j-1}, \tau_j]$
+    -   Property:
 
+    $$
+      l(\tau) =  \frac{\sum_{j=1}^J \left\{\int_{\tau_{j-1}}^{\tau_j} S(t) {\rm d}t \times l(\tau_{j-1}, \tau_j] \right\}}
+      {\sum_{j=1}^J \left\{\int_{\tau_{j-1}}^{\tau_j} S(t) {\rm d}t \right\}}
+        $$
 
 ## References
 
