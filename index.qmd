@@ -27,25 +27,31 @@ SAVVY site: [https://numbersman77.github.io/savvy/](https://numbersman77.github.
 
 -   @unkel2018:
     -   Advocates for a structured framework to define *what* is being estimated in AE analyses (estimand)
-    -   Proposes the Aalen-Johansen estimator as the most appropriate tool for estimating cumulative AE probabilities in the presence of censoring and competing risks
-
--  SAVVY publications [@rufibach2024]:
+    -   Proposes the Aalen-Johansen (AJ) estimator as the most appropriate tool for estimating cumulative AE probabilities in the presence of censoring and competing risks
+-   SAVVY publications [@stegherr2021; @stegherr2021a; @stegherr2021b; @rufibach2024]:
     -   In presence of competing events and censoring, considered
-        -   Aalen-Johansen estimator for cumulative AE probability
+        -   Aalen-Johansen (AJ) estimator for cumulative AE probability
         -   Hazard-based estimators (cause-specific hazard)
         -   One minus Kaplan-Meier estimator (uninterpretable)
-        -   Incidence proportion (based by censoring)
-        $$
-        \mbox{Incidence Proportion (IP)}= \frac{\mbox{Number of patients with at least one AE}}
-        {\mbox{Total number of patients in the study group}}
-        $$
-    -   Advocates for the Aalen-Johansen estimator as the gold standard for estimating cumulative AE probabilities
-
+        -   Incidence proportion (based by censoring) $$
+            \mbox{Incidence Proportion (IP)}= \frac{\mbox{Number of patients with at least one AE}}
+            {\mbox{Total number of patients in the study group}}
+            $$
+    -   Advocates for the AJ estimator as the gold standard for estimating cumulative AE probabilities
 
 ## *While-on-treatment* approach
 
-```{r}
+-   **Notation**
+    -   $D$: time to competing event (death, treatment discontinuation, etc.)
+    -   $N(t)$: counting process for (possibly recurrent) AE (${\rm d}N(t)\equiv 0$ for $t>D$)
+-   **Estimands**
+    -   $E\{N(t)\}$: cumulative incidence/frequency of AE by time $t$
+        -   Estimated by AJ estimator
+        -   Does not account for time at risk
+-   Average incidence while on treatment
+    -   $E\{N(t)\}/E\{D\wedge t\}$: average number of AE per unit time on treatment (alive)
+    -   Possible extension: average incidence during year 1, 2, etc., per unit time on treatment
 
-```
+
 
 ## References
