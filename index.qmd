@@ -7,6 +7,7 @@ format:
     css: styles.css
     toc: true
     linkcolor: "#C5050C"
+    backgroundcolor: "#FFFFFF"
 bibliography: references.bib
 ---
 
