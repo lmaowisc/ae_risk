@@ -1,5 +1,5 @@
 /* css styles */
-a:link {
+a:link, a:visited {
   text-decoration: none;
   color: #C5050C;
 }
