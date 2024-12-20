@@ -5,6 +5,7 @@ date: today
 format: 
   html:
    toc: true
+bibliography: references.bib
 ---
 
 ## Existing materials
@@ -13,14 +14,32 @@ format:
 
 *Quantification of safety signals in clinical trials: Estimand, estimation, and how would good look like in ten years?* \[[Abstracts](References/abstracts.pdf){target="_blank"}\]
 
--   **[Kaspar Rufibach](https://numbersman77.github.io/kasparrufibach/){target="_blank"}**: Principled approach to time-to-event endpoints with competing risks, with a focus on analysis of aes \[[slides](References/Rufibach_slides_2023.pdf){target="_blank"}\]
--   **Anja Loos**: Estimands for safety – one size fits all? \[[paper](References/Unkel et al (2019) - Pharm Statist.pdf){target="_blank"}\]
+-   [**Kaspar Rufibach**](https://numbersman77.github.io/kasparrufibach/){target="_blank"}: Principled approach to time-to-event endpoints with competing risks, with a focus on analysis of aes \[[slides](References/Rufibach_slides_2023.pdf){target="_blank"}\]
+-   **Anja Loos**: Estimands for safety – one size fits all? \[[paper](References/Unkel%20et%20al%20(2019)%20-%20Pharm%20Statist.pdf){target="_blank"}\]
 -   **Laura Antolini**: Adverse events with survival outcomes: from clinical questions to methods for statistical analysis \[[PhD dissertation](References/ELENA_phd.pdf){target="_blank"}\]
 -   **Kit Roes**: Regulatory perspective on the analysis of safety in clinical trials and beyond \[slides\]
 
-SAVVY site: [https://numbersman77.github.io/savvy/](https://numbersman77.github.io/savvy/){target="_blank"}.
+SAVVY site: [https://numbersman77.github.io/savvy/](https://numbersman77.github.io/savvy/){target="_blank"}
+
+-   A consortium of academic and industry partners aiming to use survival analysis techniques to address varying follow-up times and competing events in AE analysis.
 
 ### Literature review
+
+-   @unkel2018:
+    -   Advocates for a structured framework to define *what* is being estimated in AE analyses (estimand)
+    -   Proposes the Aalen-Johansen estimator as the most appropriate tool for estimating cumulative AE probabilities in the presence of censoring and competing risks
+
+-  SAVVY publications [@rufibach2024]:
+    -   In presence of competing events and censoring, considered
+        -   Aalen-Johansen estimator for cumulative AE probability
+        -   Hazard-based estimators (cause-specific hazard)
+        -   One minus Kaplan-Meier estimator (uninterpretable)
+        -   Incidence proportion (based by censoring)
+        $$
+        \mbox{Incidence Proportion (IP)}= \frac{\mbox{Number of patients with at least one AE}}
+        {\mbox{Total number of patients in the study group}}
+        $$
+    -   Advocates for the Aalen-Johansen estimator as the gold standard for estimating cumulative AE probabilities
 
 
 ## *While-on-treatment* approach
@@ -28,3 +47,5 @@ SAVVY site: [https://numbersman77.github.io/savvy/](https://numbersman77.github.
 ```{r}
 
 ```
+
+## References

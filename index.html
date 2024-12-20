@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Lu Mao, KyungMann Kim">
-<meta name="dcterms.date" content="2024-12-03">
+<meta name="dcterms.date" content="2024-12-19">
 
 <title>Estimating AE risk under varying follow-up times and competing risks</title>
 <style>
@@ -22,7 +22,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="index_files/libs/clipboard/clipboard.min.js"></script>
@@ -36,6 +55,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="index_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -52,6 +73,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#literature-review" id="toc-literature-review" class="nav-link" data-scroll-target="#literature-review">Literature review</a></li>
   </ul></li>
   <li><a href="#while-on-treatment-approach" id="toc-while-on-treatment-approach" class="nav-link" data-scroll-target="#while-on-treatment-approach"><em>While-on-treatment</em> approach</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
 </div>
@@ -76,7 +98,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">December 3, 2024</p>
+      <p class="date">December 19, 2024</p>
     </div>
   </div>
   
@@ -92,22 +114,58 @@ ul.task-list li input[type="checkbox"] {
 <h4 class="anchored" data-anchor-id="iscb-2023-invited-session">ISCB (2023) Invited Session</h4>
 <p><em>Quantification of safety signals in clinical trials: Estimand, estimation, and how would good look like in ten years?</em> [<a href="References/abstracts.pdf" target="_blank">Abstracts</a>]</p>
 <ul>
-<li><strong><a href="https://numbersman77.github.io/kasparrufibach/" target="_blank">Kaspar Rufibach</a></strong>: Principled approach to time-to-event endpoints with competing risks, with a focus on analysis of aes [<a href="References/Rufibach_slides_2023.pdf" target="_blank">slides</a>]</li>
+<li><a href="https://numbersman77.github.io/kasparrufibach/" target="_blank"><strong>Kaspar Rufibach</strong></a>: Principled approach to time-to-event endpoints with competing risks, with a focus on analysis of aes [<a href="References/Rufibach_slides_2023.pdf" target="_blank">slides</a>]</li>
 <li><strong>Anja Loos</strong>: Estimands for safety – one size fits all? [<a href="References/Unkel%20et%20al%20(2019)%20-%20Pharm%20Statist.pdf" target="_blank">paper</a>]</li>
 <li><strong>Laura Antolini</strong>: Adverse events with survival outcomes: from clinical questions to methods for statistical analysis [<a href="References/ELENA_phd.pdf" target="_blank">PhD dissertation</a>]</li>
 <li><strong>Kit Roes</strong>: Regulatory perspective on the analysis of safety in clinical trials and beyond [slides]</li>
 </ul>
-<p>SAVVY site: <a href="https://numbersman77.github.io/savvy/" target="_blank">https://numbersman77.github.io/savvy/</a>.</p>
+<p>SAVVY site: <a href="https://numbersman77.github.io/savvy/" target="_blank">https://numbersman77.github.io/savvy/</a></p>
+<ul>
+<li>A consortium of academic and industry partners aiming to use survival analysis techniques to address varying follow-up times and competing events in AE analysis.</li>
+</ul>
 </section>
 <section id="literature-review" class="level3">
 <h3 class="anchored" data-anchor-id="literature-review">Literature review</h3>
+<ul>
+<li><span class="citation" data-cites="unkel2018">Unkel et al. (<a href="#ref-unkel2018" role="doc-biblioref">2018</a>)</span>:
+<ul>
+<li>Advocates for a structured framework to define <em>what</em> is being estimated in AE analyses (estimand)</li>
+<li>Proposes the Aalen-Johansen estimator as the most appropriate tool for estimating cumulative AE probabilities in the presence of censoring and competing risks</li>
+</ul></li>
+<li>SAVVY publications <span class="citation" data-cites="rufibach2024">(<a href="#ref-rufibach2024" role="doc-biblioref">Rufibach et al. 2024</a>)</span>:
+<ul>
+<li>In presence of competing events and censoring, considered
+<ul>
+<li>Aalen-Johansen estimator for cumulative AE probability</li>
+<li>Hazard-based estimators (cause-specific hazard)</li>
+<li>One minus Kaplan-Meier estimator (uninterpretable)</li>
+<li>Incidence proportion (based by censoring) <span class="math display">\[
+\mbox{Incidence Proportion (IP)}= \frac{\mbox{Number of patients with at least one AE}}
+{\mbox{Total number of patients in the study group}}
+\]</span></li>
+</ul></li>
+<li>Advocates for the Aalen-Johansen estimator as the gold standard for estimating cumulative AE probabilities</li>
+</ul></li>
+</ul>
+<p>Advocates for the Aalen-Johansen estimator as the gold standard for estimating cumulative AE probabilities</p>
 </section>
 </section>
 <section id="while-on-treatment-approach" class="level2">
 <h2 class="anchored" data-anchor-id="while-on-treatment-approach"><em>While-on-treatment</em> approach</h2>
 </section>
+<section id="references" class="level2 unnumbered">
 
-</main>
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-rufibach2024" class="csl-entry" role="listitem">
+Rufibach, Kaspar, Jan Beyersmann, Tim Friede, Claudia Schmoor, and Regina Stegherr. 2024. <span>“Survival Analysis for AdVerse Events with VarYing Follow-up Times (SAVVY): Summary of Findings and Assessment of Existing Guidelines.”</span> <em>Trials</em> 25 (1). <a href="https://doi.org/10.1186/s13063-024-08186-7">https://doi.org/10.1186/s13063-024-08186-7</a>.
+</div>
+<div id="ref-unkel2018" class="csl-entry" role="listitem">
+Unkel, Steffen, Marjan Amiri, Norbert Benda, Jan Beyersmann, Dietrich Knoerzer, Katrin Kupas, Frank Langer, et al. 2018. <span>“On Estimands and the Analysis of Adverse Events in the Presence of Varying Follow<span>-</span>up Times Within the Benefit Assessment of Therapies.”</span> <em>Pharmaceutical Statistics</em> 18 (2): 166–83. <a href="https://doi.org/10.1002/pst.1915">https://doi.org/10.1002/pst.1915</a>.
+</div>
+</div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
