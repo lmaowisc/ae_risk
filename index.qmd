@@ -4,7 +4,9 @@ author: "Lu Mao, KyungMann Kim"
 date: today
 format: 
   html:
-   toc: true
+    css: styles.css
+    toc: true
+    linkcolor: "#C5050C"
 bibliography: references.bib
 ---
 
