@@ -175,6 +175,28 @@ div.csl-indent {
 </ul></li>
 <li>Possible extension: average incidence during year 1, 2, etc., per unit time on treatment</li>
 </ul></li>
+<li><p><strong>Approach</strong></p>
+<ul>
+<li><em>Overall estimand</em>: <span class="math display">\[
+l(\tau) = \frac{E\{N(\tau)\}}{E\{D\wedge \tau\}}: \mbox{ Average incidence in }[0, \tau]
+\]</span></li>
+<li><em>Window-specific estimands</em> <span class="math inline">\((0=\tau_0&lt;\tau_1&lt;\cdots&lt;\tau_J = \tau)\)</span> <span class="math display">\[\begin{align}
+   l(\tau_{j-1}, \tau_j] &amp;= \frac{\mbox{Average number of AE in $[\tau_{j-1}, \tau_j]$}}{\mbox{Average time on treatment in $[\tau_{j-1}, \tau_j]$}}\\
+   &amp; = \frac{E\{N(\tau_j)-N(\tau_{j-1})\}}{E\{D\wedge \tau_j - D\wedge \tau_{j-1}\}}\\
+   &amp; = \frac{E\{N(\tau_j)-N(\tau_{j-1})\}}{\int_{\tau_{j-1}}^{\tau_j} S(t) {\rm d}t}
+\end{align}\]</span>
+<ul>
+<li><span class="math inline">\(S(t) = P(D &gt; t)\)</span></li>
+<li><span class="math inline">\(\int_{\tau_{j-1}}^{\tau_j} S(t) {\rm d}t\)</span> is <em>window mean life</em> <span class="citation" data-cites="paukner2021">(<a href="#ref-paukner2021" role="doc-biblioref">Paukner and Chappell 2021</a>)</span> in <span class="math inline">\([\tau_{j-1}, \tau_j]\)</span></li>
+</ul></li>
+<li><em>Estimation</em> <span class="math inline">\((X=D\wedge C; C \mbox{ is censoring time})\)</span>
+<ul>
+<li>Numberator: <span class="math display">\[
+E\{N(\tau_j)-N(\tau_{j-1})\} = \int_{\tau_{j-1}}^{\tau_j} E\{{\rm d} N(t)\mid X\geq t\} S(t -) {\rm d}t
+\]</span> estimated by AJ-type estimator</li>
+<li><span class="math inline">\(\int_{\tau_{j-1}}^{\tau_j} S(t) {\rm d}t\)</span>: AUC of KM estimator on <span class="math inline">\((\tau_{j-1}, \tau_j]\)</span></li>
+</ul></li>
+</ul></li>
 </ul>
 </section>
 <section id="references" class="level2 unnumbered">
@@ -185,6 +207,9 @@ div.csl-indent {
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-mao2023" class="csl-entry" role="listitem">
 Mao, Lu. 2023. <span>“Nonparametric Inference of General While-Alive Estimands for Recurrent Events.”</span> <em>Biometrics</em> 79 (3): 1749–60. <a href="https://doi.org/10.1111/biom.13709">https://doi.org/10.1111/biom.13709</a>.
+</div>
+<div id="ref-paukner2021" class="csl-entry" role="listitem">
+Paukner, Mitchell, and Richard Chappell. 2021. <span>“Window Mean Survival Time.”</span> <em>Statistics in Medicine</em> 40 (25): 5521–33. <a href="https://doi.org/10.1002/sim.9138">https://doi.org/10.1002/sim.9138</a>.
 </div>
 <div id="ref-rufibach2024" class="csl-entry" role="listitem">
 Rufibach, Kaspar, Jan Beyersmann, Tim Friede, Claudia Schmoor, and Regina Stegherr. 2024. <span>“Survival Analysis for AdVerse Events with VarYing Follow-up Times (SAVVY): Summary of Findings and Assessment of Existing Guidelines.”</span> <em>Trials</em> 25 (1). <a href="https://doi.org/10.1186/s13063-024-08186-7">https://doi.org/10.1186/s13063-024-08186-7</a>.
