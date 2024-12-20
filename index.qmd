@@ -65,7 +65,7 @@ SAVVY site: [https://numbersman77.github.io/savvy/](https://numbersman77.github.
     -   *Overall estimand*: $$
         l(\tau) = \frac{E\{N(\tau)\}}{E\{D\wedge \tau\}}: \mbox{ Average incidence in }[0, \tau] 
         $$
-    -   *Period-specific estimands* $(0=\tau_0<\tau_1<\cdots<\tau_J = \tau)$ \begin{align}
+    -   *Window-specific estimands* $(0=\tau_0<\tau_1<\cdots<\tau_J = \tau)$ \begin{align}
            l(\tau_{j-1}, \tau_j] &= \frac{\mbox{Average number of AE in $[\tau_{j-1}, \tau_j]$}}{\mbox{Average time on treatment in $[\tau_{j-1}, \tau_j]$}}\\
            & = \frac{E\{N(\tau_j)-N(\tau_{j-1})\}}{E\{D\wedge \tau_j - D\wedge \tau_{j-1}\}}\\
            & = \frac{E\{N(\tau_j)-N(\tau_{j-1})\}}{\int_{\tau_{j-1}}^{\tau_j} S(t) {\rm d}t}

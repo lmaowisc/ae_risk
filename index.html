@@ -180,7 +180,7 @@ div.csl-indent {
 <li><em>Overall estimand</em>: <span class="math display">\[
 l(\tau) = \frac{E\{N(\tau)\}}{E\{D\wedge \tau\}}: \mbox{ Average incidence in }[0, \tau]
 \]</span></li>
-<li><em>Period-specific estimands</em> <span class="math inline">\((0=\tau_0&lt;\tau_1&lt;\cdots&lt;\tau_J = \tau)\)</span> <span class="math display">\[\begin{align}
+<li><em>Window-specific estimands</em> <span class="math inline">\((0=\tau_0&lt;\tau_1&lt;\cdots&lt;\tau_J = \tau)\)</span> <span class="math display">\[\begin{align}
    l(\tau_{j-1}, \tau_j] &amp;= \frac{\mbox{Average number of AE in $[\tau_{j-1}, \tau_j]$}}{\mbox{Average time on treatment in $[\tau_{j-1}, \tau_j]$}}\\
    &amp; = \frac{E\{N(\tau_j)-N(\tau_{j-1})\}}{E\{D\wedge \tau_j - D\wedge \tau_{j-1}\}}\\
    &amp; = \frac{E\{N(\tau_j)-N(\tau_{j-1})\}}{\int_{\tau_{j-1}}^{\tau_j} S(t) {\rm d}t}
